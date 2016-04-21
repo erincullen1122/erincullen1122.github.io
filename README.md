@@ -1,1 +1,1 @@
-# GA_EC-Final-Project
+# final-project
