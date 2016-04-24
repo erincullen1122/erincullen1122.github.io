@@ -1,0 +1,255 @@
+/*=====================================
+DATA
+Erin Cullen Harris
+GA FEWD Course April 2016 
+{Photo/Phile}
+
+SITE OUTLINE
+- Landing page: photo Gallery//main page image slider (1 page)
+- Sub-pages: photo Gallery drill down pages//image slider, details and links (1 page per gallery)
+- Jscript image slider
+- Mobile settings, 2 breakpoints
+- Nav Bar: constant state
+
+- Reach goal: add in way to incorporate images from family albums/grandparents world travels in 60s/70s and 
+FUN FACTS from those time periods put into timeline SLIDER
+
+* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+* {
+      font-family: 'Fira Sans', sans-serif;
+}
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 1.4em;
+     height: 0;
+}
+.clear {
+  clear: both;
+}
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+     margin: 0;
+     border: none;
+     background-color: white;
+     padding-top: 50px;
+  }
+/* font details from a site where i loved the font -- took from 
+https://www.squarespace.com/logo css style for H1 (not all of H1, 
+just some of it, + my tweaks)*/
+
+h1 { 
+    line-height: 1.05em;
+    font-weight: 700;
+    text-transform: none;
+    margin: 0 0 10px;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: auto!important;
+}
+
+h4 {
+    line-height: 1.05em;
+    font-weight: 300;
+    text-transform: none;
+    margin: 0 0 10px;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: auto!important;
+}
+
+p, li {
+    line-height: 1.05em;
+    font-weight: 600;
+    text-transform: none;
+    margin: 0 0 10px;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: auto!important;
+} 
+
+.navigation { 
+  margin: 0px;
+  margin-top: 1px;
+  padding: 20px 0px 0px 20px;
+  border: 0px;
+  background-color: rgba(#000,.5); 
+  color: black;
+  border-radius: 2px;
+}
+
+/*I REMOVED CONTAINER .container { 
+
+  margin: 0px;
+  margin-right: 0px;
+  border: solid black 1px;
+} */
+
+.row { 
+  color: black;
+  border: solid black 1px;
+  margin: 5px;
+
+}
+
+.mainsection {
+  width: 80%;
+  border: solid black 1px;
+  padding: 20px;
+  max-height: 500px;
+  margin:0px;
+}
+
+.sidebar {
+  width: 20%;
+  color: black;
+  background-color: white;
+  border: none;
+  text-align: left;
+  padding: 10px;
+  padding-left: 50px;
+  border: solid black 1px;
+}
+
+
+
+ /**CSS FOR SLIDESHOW FROM DOWNLOADED FILES**/
+
+ body {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #232525;
+      padding-top:50px;
+    }
+
+    #slides {
+      /*display: none*/
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:0px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(../images/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(../images/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+
+
+    <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+  <style>
+    #slides {
+      display: none
+    }
+
+    .container {
+      margin: 0 auto
+    }
+
