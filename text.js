@@ -1,17 +1,18 @@
 
+
+
+
+  /**************SOURCE: plug in from SlidesJS plugin***********/
+    
     $(function() {
+      event.preventDefault();  
       $('#slides').slidesjs({
-          width: 700,
-          height: 393,
           play: {
           active: true,
           auto: true,
           interval: 4000,
-          swap: true
+          swap: true,
         }
       });
     });
-
-
-
 

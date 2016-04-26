@@ -2,17 +2,7 @@
 DATA
 Erin Cullen Harris
 GA FEWD Course April 2016 
-{Photo/Phile}
-
-SITE OUTLINE
-- Landing page: photo Gallery//main page image slider (1 page)
-- Sub-pages: photo Gallery drill down pages//image slider, details and links (1 page per gallery)
-- Jscript image slider
-- Mobile settings, 2 breakpoints
-- Nav Bar: constant state
-
-- Reach goal: add in way to incorporate images from family albums/grandparents world travels in 60s/70s and 
-FUN FACTS from those time periods put into timeline SLIDER
+=======================================
 
 * Box Model Hack */
 * {
@@ -52,8 +42,8 @@ body {
      margin: 0;
      border: none;
      background-color: white;
-     padding-top: 50px;
   }
+
 /* font details from a site where i loved the font -- took from 
 https://www.squarespace.com/logo css style for H1 (not all of H1, 
 just some of it, + my tweaks)*/
@@ -62,17 +52,17 @@ h1 {
     line-height: 1.05em;
     font-weight: 700;
     text-transform: none;
-    margin: 0 0 10px;
+    margin: 2%;
+    padding-top: 2%;
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: auto!important;
-
+    text-align: left;
 }
 
 h4 {
     line-height: 1.05em;
     font-weight: 300;
     text-transform: none;
-    margin: 0 0 10px;
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: auto!important;
 }
@@ -86,16 +76,34 @@ p, li {
     -webkit-font-smoothing: auto!important;
 } 
 
+p { 
+  font-size: .80rem;
+  font-style: italic;
+  padding-bottom: 0px;
+  margin-bottom: auto, 0;
+}
+ .songref { 
+ font-style: italic;
+ font-size: .65rem;
+ padding-top: 0;
+ margin: 0, auto;
+  }
+
 .navigation { 
-  margin: 0px;
-  border: 0px;
+  margin: 0 auto;
+  border: none;
   background-color: black; 
   color: white;
-
 }
 
-#myNavbar { 
-color: white; 
+.iconbar { 
+  margin: 0 auto;
+  border: none;
+  padding: 0px;
+}
+
+.navigation a { 
+  float: right; 
 }
 
 /*I REMOVED CONTAINER .container { 
@@ -105,38 +113,27 @@ color: white;
   border: solid black 1px;
 } */
 
-
-.title { 
-  text-align: left; 
-  padding-left: 10px;
-  padding-top: 0px;
-}
-
-
 .row { 
   color: black;
   border: none;
-  margin: 5px;
-  margin-top: 2%;
   margin-bottom: 2%;
-  max-width: 1200px;
-  max-height: 600px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .mainsection {
-  width: 80%;
+  /*width: 80%;*/
   border: none;
   padding: 20px;
 }
 
 .sidebar {
-  width: 20%;
   color: black;
   background-color: white;
   border: none;
   text-align: right;
   padding: 0px;
-  padding-top: 50px;
+  padding-top: 30px;
   border: none;
 }
 
@@ -156,19 +153,20 @@ nav a {
   display: block;
   margin: 15px 25px;
   outline: none;
-  color: black;
+  color: white;
+  background-color: white;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
   text-shadow: 0 0 1px rgba(255,255,255,0.3);
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-span nav a { 
-  color: black;
-  padding: 1rem;
+span nav { 
+  padding: 7px;
 }
+
 
 nav a:hover,
 nav a:focus {
@@ -275,8 +273,8 @@ nav a:focus {
 
 .slides-js-style {
   overflow: hidden;
-  height: 300px;
-  width: 600px;
+  /*height: 300px;
+  width: 600px;*/
 }
     a.slidesjs-next,
     a.slidesjs-previous,
@@ -373,16 +371,21 @@ nav a:focus {
       overflow: hidden
     }
 
-#footer {
-      text-align: center; 
-      padding-top: 1%;
-      background-color: rgba(0,0,0,.95);
-      padding-bottom: 1%;
-      border-top: solid black 1px;
-    }
+    #footer {
+      display: inline-block;
+      width: 100%;
+      background-color: black;
+      padding: 2%;
+}
+  .social {
+      padding-left: 0px;
+      margin-left: 20px;
+      padding-bottom: 40px;
+      text-align: center;
+}
 
    /*-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->*/
-  <style>
+
     #slides {
       display: none
     }
@@ -391,3 +394,17 @@ nav a:focus {
       margin: 0 auto
     }
 
+
+  /********************************************************************/
+  /*THIS IS FOR THE "PEOPLE" SUB PAGE ------ CSS STYLES*/
+  /********************************************************************/   
+
+.col-md-4 { 
+      text-align: center;
+      padding: 2rem;
+     }
+
+.sub-nav { 
+ color: white;
+ display: inline-block;
+   }
