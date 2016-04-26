@@ -55,13 +55,41 @@ body {
 		MAIN STYLES
 ----------------------------------------------  */
 
-#wrapper {
+#gallery { 
+    margin-top: 5%; 
+    margin-bottom: 5%;
+    position: relative; 
+    width: 100%; 
+ }
+
+#gallery-view #gallery-nav #nav-thubnails { 
     width: 100%;
-    margin: 1% auto;
-    text-align: center;
-    font-family: Georgia, serif;
-    color: black;
+    display: block; 
+    float: left; 
+    width: 25%; 
+    height: 25%;
+ }
+
+.nav-buttons {
+    position: absolute; 
+    top: 0px;
 }
+
+.gallery-button1 { 
+    display: block; 
+    float: left; 
+    width: 68.3px; 
+    height: 68.3px;
+ }
+
+.gallery-button { 
+    display: block; 
+    float: left; 
+    box-shadow: rgb(0, 0, 0) 0px 4px 8px inset; 
+    width: 68.3px; 
+    height: 68.3px; 
+    background-color: rgba(0, 0, 0, 0.498039);
+ }
 
 h1 {
     font-size: 2rem;
@@ -101,8 +129,3 @@ footer a:visited {
     color: #999;
 }
 
-@media screen and (max-width:680px) {
-    h1 {
-        font-size: 30px;
-    }
-}
