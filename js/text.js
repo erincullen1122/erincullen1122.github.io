@@ -1,15 +1,19 @@
 
+
+  /**************SOURCE: plug in from SlidesJS plugin***********/
+    
     $(function() {
-      $('#slides').slidesjs(
-      {
-          width: 940,
-          height: 528,
+      event.preventDefault();  
+      $('#slides').slidesjs({
           play: {
           active: true,
           auto: true,
           interval: 4000,
-          swap: true
+          swap: true,
         }
       });
     });
 
+$(document).ready(function() {
+   var gallery = new $.ThumbnailGallery($('#gallery'));
+});
