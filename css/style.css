@@ -44,9 +44,10 @@ body {
      background-color: white;
   }
 
-/* font details from a site where i loved the font -- took from 
-https://www.squarespace.com/logo css style for H1 (not all of H1, 
-just some of it, + my tweaks)*/
+/******************************************
+/* SPECIFIC  STYLES
+/*******************************************/
+
 
 h1 { 
     line-height: 1.05em;
@@ -65,6 +66,23 @@ h4 {
     text-transform: none;
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: auto!important;
+    font-size: 1rem;
+    padding-left: 2%;
+    color: black;
+    margin: 0, auto;
+}
+
+h5 {
+  position: relative;
+  display: block;
+  margin: 2%;
+  outline: none;
+  color: #404040;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font: normal .85rem/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p, li {
@@ -77,18 +95,22 @@ p, li {
 } 
 
 p { 
-  padding-top: 25%;
   font-size: .80rem;
   font-style: italic;
   padding-bottom: 0px;
   margin-bottom: auto, 0;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: auto!important;
+
 }
- .songref { 
- font-style: italic;
- font-size: .65rem;
- padding-top: 0;
- margin: 0, auto;
-  }
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/******************************************
+/* NAVIGATION ELEMENTS
+/******************************************/
 
 .navigation { 
   margin: 0 auto;
@@ -104,15 +126,40 @@ p {
 }
 
 .navigation a { 
-  float: right; 
+  float: left; 
 }
 
-/*I REMOVED CONTAINER .container { 
 
-  margin: 0px;
-  margin-right: 0px;
-  border: solid black 1px;
-} */
+
+/******************************************
+/* SPACING ON TEXT AT TOP OF ALL PAGES 
+(except index.html)
+/*******************************************/
+
+.song { 
+  padding-top: 1.5%;
+}
+
+.subtitle { 
+  display: inline-block;
+  color: blue; 
+  font-weight: 700;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: auto!important;
+  line-height: 1.05em;
+}
+
+.wrapper {
+  padding-left: 1.5%;
+  padding-top: 1%;
+}
+
+.songref { 
+ font-style: italic;
+ font-size: .65rem;
+ padding-top: 0;
+ margin: 0, auto;
+}
 
 .row { 
   color: black;
@@ -123,13 +170,11 @@ p {
 }
 
 .mainsection {
-  width: 80%;
   border: none;
   padding: 20px;
 }
 
 .sidebar {
-  width: 20%;
   color: black;
   background-color: white;
   border: none;
@@ -138,6 +183,32 @@ p {
   padding-top: 30px;
   border: none;
 }
+#footer {
+  display: inline-block;
+  width: 100%;
+  background-color: black;
+  padding: 0%;
+}
+.social {
+  padding-left: 0px;
+  padding-top: 20px;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.social img { 
+width: 40px;
+height: 40px;
+ }
+}
+.spacing { 
+padding: 3%; }
+
+/******************************************
+/* SLIDES JS PLUGIN ELEMENTS INDEX.HTML 
+IMAGE SLIDER STYLE
+/******************************************/
 
 div.slidesjs-container { 
   max-height: 450px;
@@ -148,253 +219,567 @@ li {
   list-style: none; 
   padding-top: 20px;
 }
-/* Effect 9: second text and borders */
 
-nav a {
-  position: relative;
-  display: block;
-  margin: 15px 25px;
-  outline: none;
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  text-shadow: 0 0 1px rgba(255,255,255,0.3);
-  font-size: 1rem;
-}
+        /******************************************
+        /* STYLE//SLIDES JS --- Effect 9: second text and borders */
+        /******************************************/
 
-span nav { 
-  padding: 7px;
-}
+        nav a {
+          position: relative;
+          display: block;
+          margin: 15px 25px;
+          outline: none;
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 400;
+          text-shadow: 0 0 1px rgba(255,255,255,0.3);
+          font-size: 1rem;
+        }
+
+        span nav { 
+          padding: 7px;
+        }
 
 
-nav a:hover,
-nav a:focus {
-  outline: none;
-  color: black;
-}
+        nav a:hover,
+        nav a:focus {
+          outline: none;
+          color: black;
+        }
 
-.clearfix.cl-effect-9 a {
-  margin: 0 20px;
-  padding: 0px;
-}
+        .clearfix.cl-effect-9 a {
+          margin: 0 20px;
+          padding: 0px;
+        }
 
-.cl-effect-9 a::before,
-.cl-effect-9 a::after {
-  position: absolute;
-  color: black;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #000;
-  content: '';
-  opacity: 0.2;
-  -webkit-transition: opacity 0.3s, height 0.3s;
-  -moz-transition: opacity 0.3s, height 0.3s;
-  transition: opacity 0.3s, height 0.3s;
-}
+        .cl-effect-9 a::before,
+        .cl-effect-9 a::after {
+          position: absolute;
+          color: black;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: #000;
+          content: '';
+          opacity: 0.2;
+          -webkit-transition: opacity 0.3s, height 0.3s;
+          -moz-transition: opacity 0.3s, height 0.3s;
+          transition: opacity 0.3s, height 0.3s;
+        }
 
-.cl-effect-9 a::after {
-  top: 100%;
-  opacity: 0;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  transform: translateY(-10px);
-}
+        .cl-effect-9 a::after {
+          top: 100%;
+          opacity: 0;
+          -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+          -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+          transition: transform 0.3s, opacity 0.3s;
+          -webkit-transform: translateY(-10px);
+          -moz-transform: translateY(-10px);
+          transform: translateY(-10px);
+        }
 
-.cl-effect-9 a span:first-child {
-  z-index: 2;
-  display: block;
-  font-weight: 300;
-}
+        .cl-effect-9 a span:first-child {
+          z-index: 2;
+          display: block;
+          font-weight: 300;
+        }
 
-.cl-effect-9 a span:last-child {
-  z-index: 1;
-  display: block;
-  padding: 8px 0 0 0;
-  color: rgba(#fff,0.4);
-  text-shadow: none;
-  text-transform: none;
-  font-size: 3rem;
-  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
+        .cl-effect-9 a span:last-child {
+          z-index: 1;
+          display: block;
+          padding: 8px 0 0 0;
+          color: rgba(#fff,0.4);
+          text-shadow: none;
+          text-transform: none;
+          font-size: 3rem;
+          -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+          -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+          transition: transform 0.3s, opacity 0.3s;
+          -webkit-transform: translateY(-100%);
+          -moz-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
 
-.cl-effect-9 a:hover::before,
-.cl-effect-9 a:focus::before {
-  height: 6px;
-}
+        .cl-effect-9 a:hover::before,
+        .cl-effect-9 a:focus::before {
+          height: 6px;
+        }
 
-.cl-effect-9 a:hover::before,
-.cl-effect-9 a:hover::after,
-.cl-effect-9 a:focus::before,
-.cl-effect-9 a:focus::after {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  transform: translateY(0px);
-}
+        .cl-effect-9 a:hover::before,
+        .cl-effect-9 a:hover::after,
+        .cl-effect-9 a:focus::before,
+        .cl-effect-9 a:focus::after {
+          opacity: 1;
+          -webkit-transform: translateY(0px);
+          -moz-transform: translateY(0px);
+          transform: translateY(0px);
+        }
 
-.cl-effect-9 a:hover span:last-child,
-.cl-effect-9 a:focus span:last-child {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  transform: translateY(0%);
-}
+        .cl-effect-9 a:hover span:last-child,
+        .cl-effect-9 a:focus span:last-child {
+          opacity: 1;
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          transform: translateY(0%);
+        }
 
- /**CSS FOR SLIDESHOW FROM DOWNLOADED FILES**/
 
- body {
-      -webkit-font-smoothing: antialiased;
-      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #fff;
-      padding-top:50px;
+         /**CSS FOR SLIDESHOW FROM DOWNLOADED FILES**/
+
+         body {
+              -webkit-font-smoothing: antialiased;
+              font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+              color: #fff;
+              padding-top:50px;
+            }
+
+            #slides {
+              /*display: none*/
+            }
+
+            #slides .slidesjs-navigation {
+              margin-top:10px;
+              margin-bottom:30px;
+            }
+
+        .slides-js-style {
+          overflow: hidden;
+          /*height: 300px;
+          width: 600px;*/
+        }
+            a.slidesjs-next,
+            a.slidesjs-previous,
+            a.slidesjs-play,
+            a.slidesjs-stop {
+              background-image: url(../images/btns-next-prev.png);
+              background-repeat: no-repeat;
+              display:block;
+              width:12px;
+              height:18px;
+              overflow: hidden;
+              text-indent: -9999px;
+              float: left;
+              margin-right:5px;
+            }
+
+            a.slidesjs-next {
+              margin-right:10px;
+              background-position: -12px 0;
+            }
+
+            a:hover.slidesjs-next {
+              background-position: -12px -18px;
+            }
+
+            a.slidesjs-previous {
+              background-position: 0 0;
+            }
+
+            a:hover.slidesjs-previous {
+              background-position: 0 -18px;
+            }
+
+            a.slidesjs-play {
+              width:15px;
+              background-position: -25px 0;
+            }
+
+            a:hover.slidesjs-play {
+              background-position: -25px -18px;
+            }
+
+            a.slidesjs-stop {
+              width:18px;
+              background-position: -41px 0;
+            }
+
+            a:hover.slidesjs-stop {
+              background-position: -41px -18px;
+            }
+
+            .slidesjs-pagination {
+              margin: 7px 0 0;
+              float: right;
+              list-style: none;
+            }
+
+            .slidesjs-pagination li {
+              float: left;
+              margin: 0 1px;
+            }
+
+            .slidesjs-pagination li a {
+              display: block;
+              width: 13px;
+              height: 0;
+              padding-top: 13px;
+              background-image: url(../images/pagination.png);
+              background-position: 0 0;
+              float: left;
+              overflow: hidden;
+            }
+
+            .slidesjs-pagination li a.active,
+            .slidesjs-pagination li a:hover.active {
+              background-position: 0 -13px
+            }
+
+            .slidesjs-pagination li a:hover {
+              background-position: 0 -26px
+            }
+
+            #slides a:link,
+            #slides a:visited {
+              color: black;
+            }
+
+            #slides a:hover,
+            #slides a:active {
+              color: black;
+            }
+
+            .navbar {
+              overflow: hidden
+            }
+
+           /*-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->*/
+
+            #slides {
+              display: none
+            }
+
+            .container {
+              margin: 0 auto
+            }
+
+/******************************************
+/* END SLIDES JS PLUGIN STYLE
+/******************************************/
+
+
+
+
+/********************************************************************/
+/* START IMAGE GALLERY MODAL FOR PEOPLE.HTML, PLACES.HTML, PROFILE.HTML
+/********************************************************************/   
+
+    .col-md-4 { 
+          text-align: center;
+          padding: 2rem;
+         }
+
+    .sub-nav { 
+         color: white;
+         display: inline-block;
+         text-align: right;
+         align-items: right;
+         padding: 1%;
+       }
+
+    /*********************************/
+         
+    * {
+          font-family: 'Fira Sans', sans-serif;
     }
+          /* The Image Box */
+          div.img {
+              border: 1px solid #ccc;
+          }
+
+          div.img:hover {
+              border: 1px solid #777;
+          }
+
+          h2 { 
+              padding-top: 3%; 
+              padding-left: 1%;
+              margin: 1%;
+              color: black;
+              text-decoration: none;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              font-weight: 400;
+              text-shadow: 0 0 1px rgba(255,255,255,0.3);
+              font-size: 2rem;
+          }
+
+          /* The Image */
+          div.img img {
+              width: 100%;
+              height: auto;
+              cursor: pointer;
+          }
+
+          /* Description of Image */
+          div.desc {
+              padding: 15px;
+              text-align: center;
+              color: black;
+          }
+
+          * {
+              box-sizing: border-box;
+          }
+
+          /* Add Responsiveness */
+          .responsive {
+              padding: 0 6px;
+              padding-bottom: 10px;
+              float: left;
+              width: 24.99999%;
+          }
+
+          /* The Modal (background) */
+          .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 100px; /* Location of the box */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+          }
+
+          /* Modal Content (image) */
+          .modal-content {
+              margin: auto;
+              margin-top: 6%;
+              display: block;
+              width: 80%;
+              max-width: 700px;
+          }
+
+          /* Caption of Modal Image */
+          #caption {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 700px;
+              text-align: center;
+              color: white;
+              padding: 10px 0;
+              height: 150px;
+          }
+
+          /* Add Animation */
+          .modal-content, #caption {    
+              -webkit-animation-name: zoom;
+              -webkit-animation-duration: 0.6s;
+              animation-name: zoom;
+              animation-duration: 0.6s;
+          }
+
+          @-webkit-keyframes zoom {
+              from {transform:scale(0)} 
+              to {transform:scale(1)}
+          }
+
+          @keyframes zoom {
+              from {transform:scale(0.1)} 
+              to {transform:scale(1)}
+          }
+
+          /* The Close Button */
+          .close {
+              margin: 0px;position: absolute;
+              top: 15px;
+              right: 35px;
+              color: white;
+              font-size: 40px;
+              font-weight: bold;
+              transition: 0.3s;
+          }
+
+          .close:hover,
+          .close:focus {
+              color: white;
+              text-decoration: none;
+              cursor: pointer;
+          }
 
 
-    #slides {
-      /*display: none*/
-    }
+          /* Responsive Columns */
+          @media only screen and (max-width: 700px){
+              .responsive {
+                  width: 49.99999%;
+                  margin: 6px 0;
+              }
+              .modal-content {
+                  width: 100%;
+              }
+              div.slidesjs-container { 
+                 width: 100%;
+                }
+          }
 
-    #slides .slidesjs-navigation {
-      margin-top:10px;
-      margin-bottom:30px;
-    }
+          @media only screen and (max-width: 500px){
+              .responsive {
+                  width: 100%;
+              }
+          }
 
-.slides-js-style {
-  overflow: hidden;
-  height: 300px;
-  width: 600px;
-}
-    a.slidesjs-next,
-    a.slidesjs-previous,
-    a.slidesjs-play,
-    a.slidesjs-stop {
-      background-image: url(../images/btns-next-prev.png);
-      background-repeat: no-repeat;
-      display:block;
-      width:12px;
-      height:18px;
-      overflow: hidden;
-      text-indent: -9999px;
-      float: left;
-      margin-right:5px;
-    }
+          /* Clear Floats */
+          .clearfix:after {
+              content: "";
+              display: table;
+              clear: both;
+          }
 
-    a.slidesjs-next {
-      margin-right:10px;
-      background-position: -12px 0;
-    }
+ /********************************************************************/
+/* END START IMAGE GALLERY MODAL FOR PEOPLE.HTML, PLACES.HTML, PROFILE.HTML
+/********************************************************************/   
+        
+        .menu, .menu-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5%;
+            width: 5%;
+            list-style-type: none;
+            margin: 1%;
+            padding: 0;
+            background: red;
+            z-index:10;  
+            overflow:hidden;
+            box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+        }
+        .menu li a{
+          display: block;
+          text-indent: -500em;
+          height: 5em;
+          width: 5em;
+          line-height: 5em;
+          text-align:center;
+          color: #72739f;
+          position: relative;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          transition: background 0.1s ease-in-out;
+        }
+        .menu li a:before {
+          font-family: FontAwesome;
+          speak: none;
+          text-indent: 0em;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          font-size: 1.4em;
+        }
+        .menu li a.search:before {
+          content: "\f002";
+        }
+        .menu li a.archive:before {
+          content: "\f187";
+        }
+        .menu li a.pencil:before {
+          content: "\f040";
+        }
+        .menu li a.contact:before {
+          content: "\f003";
+        }
+        .menu li a.about:before {
+          content: "\f007";
+        }
+        .menu li a.home:before {
+          content: "\f039";
+        }
+        .menu-bar li a:hover,
+        .menu li a:hover,
+        .menu li:first-child a {
+          background: #267fdd;
+          color: #fff;
+        }
+        .menu-bar{
+            overflow:hidden;
+            left:5em;
+            z-index:5;
+            width:0;
+            height:0;
+            transition: all 0.1s ease-in-out;
+        }
+        .menu-bar li a{
+          display: block;
+          height: 4em;
+          line-height: 4em;
+          text-align:center;
+          color: #72739f;
+          text-decoration:none;  
+          position: relative;
+          font-family:verdana;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          transition: background 0.1s ease-in-out;
+        }
+        .menu-bar li:first-child a{
+            height:5em;
+            background: #267fdd;
+            color: #fff;    
+            line-height:5
+        }
 
-    a:hover.slidesjs-next {
-      background-position: -12px -18px;
-    }
 
-    a.slidesjs-previous {
-      background-position: 0 0;
-    }
+        .para{
+            color:#033f72;
+            padding-left:100px;
+            font-size:3em;
+            margin-bottom:2px;
+        }
 
-    a:hover.slidesjs-previous {
-      background-position: 0 -18px;
-    }
+        .open{
+            width:10em;
+            height:100%;
+        }
 
-    a.slidesjs-play {
-      width:15px;
-      background-position: -25px 0;
-    }
+        @media all and (max-width: 500px) {
+            .container{
+                margin-top:100px;
+            }
+            .menu{
+                height:5em;
+                width:100%;
+            }
+            .menu li{
+                display:inline-block;
+                float:left;
+            }
+            .menu-bar li a{
+                width:100%;
+            }
+            .menu-bar{
+                width:100%;
+                left:0;
+                height:0;
+            }
+            .open{
+                width:100%;
+                height:auto;
+            }
+            .para{
+            padding-left:5px;
+        }  
+        }
+        @media screen and (max-height: 34em){
+          .menu li,
+          .menu-bar {
+            font-size:70%;
+          }
+        }
+        @media screen and (max-height: 34em) and (max-width: 500px){
+          .menu{
+                height:3.5em;
+            }
+        }
 
-    a:hover.slidesjs-play {
-      background-position: -25px -18px;
-    }
 
-    a.slidesjs-stop {
-      width:18px;
-      background-position: -41px 0;
-    }
 
-    a:hover.slidesjs-stop {
-      background-position: -41px -18px;
-    }
 
-    .slidesjs-pagination {
-      margin: 7px 0 0;
-      float: right;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 1px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(../images/pagination.png);
-      background-position: 0 0;
-      float: left;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    #slides a:link,
-    #slides a:visited {
-      color: black;
-    }
-
-    #slides a:hover,
-    #slides a:active {
-      color: black;
-    }
-
-    .navbar {
-      overflow: hidden
-    }
-
-    #footer {
-      display: inline-block;
-      width: 100%;
-      background-color: black;
-      padding: 2%;
-}
-  .social img a {
-      display: inline-block;
-      width: auto;
-      height: auto;
-      padding-left: 0px;
-      margin-left: 20px;
-      padding-bottom: 40px;
-      float: center;
-}
-
-   /*-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->*/
-
-    #slides {
-      display: none
-    }
-
-    .container {
-      margin: 0 auto
-    }
+/*END STYLING
+/********************************************************************/   
 
